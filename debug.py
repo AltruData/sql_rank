@@ -73,6 +73,7 @@ def main():
 
     # Save the output information
     save_output(hyperparameters, input_data_config, data_heads)
+    print("\nOutput files saved")
 
 if __name__ == "__main__":
     main()
