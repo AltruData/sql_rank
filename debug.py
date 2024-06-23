@@ -38,7 +38,7 @@ def read_data_from_channel(channel_name, input_mode='File'):
         raise NotImplementedError("Pipe mode is not implemented in this example")
 
 def save_output(hyperparameters, input_data_config, data_heads):
-    output_dir = '/opt/ml/output'
+    output_dir = '/opt/ml/output/data'
     os.makedirs(output_dir, exist_ok=True)
 
     hyperparameters_path = os.path.join(output_dir, 'hyperparameters.json')
