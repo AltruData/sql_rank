@@ -41,6 +41,13 @@ def calculate_mean(dataframe, column_name):
     return dataframe[column_name].mean()
 
 def main():
+    import sys
+
+    # Print the command-line arguments as a raw string
+    command_line = ' '.join(sys.argv)
+    print(f"Command line arguments: {command_line}")
+
+    parser = argparse.ArgumentParser()
     # Set up argument parsing
     parser = argparse.ArgumentParser(description='Load a DataFrame from S3 and calculate the mean of a column.')
     parser.add_argument('--awskey', type=str, required=True, help='AWS access key ID')
@@ -62,4 +69,7 @@ def main():
     print(f"The mean of column '{args.column}' is: {mean_value}")
 
 if __name__ == "__main__":
+    command_line = ' '.join(sys.argv)
+    print(f"Command line arguments: {command_line}")
+
     main()
