@@ -76,6 +76,7 @@ def main():
     print("\nOutput files saved")
 
 if __name__ == "__main__":
+    import sys
     command_line = ' '.join(sys.argv)
     print(f"Command line arguments: {command_line}")
     main()
